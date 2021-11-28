@@ -14,14 +14,14 @@ created, run, and maintain [Antergos](http://antergos.com).
 ## Prerequisites
 
 * lightdm
-* lightdm-webkit2-greeter
+* [web-greeter](https://github.com/JezerM/web-greeter)/[nody-greeter](https://github.com/JezerM/nody-greeter)
 
-Enable `lightdm-webkit2-greeter` by editing `/etc/lightdm/lightdm.conf` and setting `greeter-session` property to `lightdm-webkit2-greeter` :
+Enable `nody-greeter`/`web-greeter` by editing `/etc/lightdm/lightdm.conf` and setting `greeter-session` property to `nody-greeter` or `web-greeter` :
 
 ```
 [SeatDefaults]
 #greeter-session=lightdm-gtk-greeter
-greeter-session=lightdm-webkit2-greeter
+greeter-session=nody-greeter
 user-session=your-session (gnome,cinnamon,xfce...)
 
 ```
@@ -30,8 +30,8 @@ user-session=your-session (gnome,cinnamon,xfce...)
 
 Can be installed through the [AUR](https://aur.archlinux.org/packages/lightdm-webkit-theme-luminos/).
 
-To select rotating-rubix as default theme just change the `webkit-theme=`  in `/etc/lightdm/lightdm-webkit2-greeeter.conf`
-to `rotating-rubix`.
+To select rotating-rubix as default theme just change the `theme: greeter_theme`  in `/etc/lightdm/web-greeter.yml`
+to `theme: rotating-rubix`.
 
 # Uninstallation
 

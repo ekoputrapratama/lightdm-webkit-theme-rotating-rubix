@@ -9,13 +9,14 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-mkdir -p /usr/share/lightdm-webkit/themes
-cd /usr/share/lightdm-webkit/themes
+mkdir -p /usr/share/web-greeter/themes
+cd /usr/share/web-greeter/themes
 if [ -d $_pkgname ] 
 then
   echo "Removing old theme"
   rm -rf ${_pkgname}
 fi
+echo "Copying theme files"
 cp -dpr --no-preserve=ownership ${srcdir} ${_pkgname}
 echo "Removing .git files"
 cd ${_pkgname}
