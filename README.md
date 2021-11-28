@@ -1,4 +1,4 @@
-# lightdm-webkit-theme-luminos
+# lightdm-webkit-theme-rotating-rubix
 
 
 ## Overview
