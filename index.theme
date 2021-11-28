@@ -1,0 +1,7 @@
+[theme]
+name=Rotating Rubix
+version=1.0.0
+description=Rotating Rubix Theme
+engine=lightdm-webkit2-greeter
+url=index.html
+session=xfce4

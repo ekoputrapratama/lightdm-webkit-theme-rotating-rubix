@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+export pkgname=lightdm-webkit-theme-rotating-rubix
+export _pkgname=rotating-rubix
+export srcdir=$(pwd)
+
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+mkdir -p /usr/share/lightdm-webkit/themes
+cd /usr/share/lightdm-webkit/themes
+if [ -d $_pkgname ] 
+then
+  echo "Removing old theme"
+  rm -rf ${_pkgname}
+fi
+cp -dpr --no-preserve=ownership ${srcdir} ${_pkgname}
+echo "Removing .git files"
+cd ${_pkgname}
+rm -rf .gitignore
+echo "Removing dev files"
+rm -rf .git
+rm -f PKGBUILD
